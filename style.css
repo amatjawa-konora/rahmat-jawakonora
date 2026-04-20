@@ -239,19 +239,14 @@ footer {
 }
 
 .nav-container {
-  max-width: 1100px;   /* dari 1300 → lebih sempit */
+  max-width: 1200px;
   margin: auto;
-  padding: 0 20px;     /* tambah jarak kiri kanan */
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.menu {
-  list-style: none;
-  display: flex;
-  gap: 30px; /* dari 20 → lebih lega */
-  margin: 0;
-  padding: 0;
+.logo {
+  margin-left: -50px; /* geser ke kiri */
 }
