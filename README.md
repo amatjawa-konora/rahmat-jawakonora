@@ -1,2 +1,2 @@
-# rahmat-jawakonora.net
+# rahmat-jawakonora
 Ini merupakan website pribadi yang bisa di custom
