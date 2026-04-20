@@ -4,6 +4,7 @@
   <title>Website Saya</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
@@ -11,13 +12,22 @@
   <div id="navbar"></div>
 
   <!-- HERO / HEAD -->
-  <section class="hero">
+  <section class="hero" id="home">
     <div class="overlay">
       <h1>Selamat Datang Di Website Saya</h1>
-      <p>Saya adalah seorang pustakawan yang hobi melakukan pengembangan perpustakaan
-        <br>
-        Saya juga merupakan seorang konsultan perpustakaan yang dapat memberikan bantuan untuk pengembangan perpustakaan
+
+      <p class="short-text">
+        Saya adalah seorang pustakawan yang hobi melakukan pengembangan perpustakaan
       </p>
+      <div class="more-text" id="moreText">
+        <p>
+          Saya juga merupakan seorang konsultan perpustakaan yang dapat memberikan bantuan 
+          untuk pengembangan perpustakaan
+        </p>
+      </div>
+      <button class="btn-toggle" onclick="toggleText()">
+        Lihat Selengkapnya
+      </button>
     </div>
   </section>
 
@@ -55,7 +65,7 @@
     <h2 class="judul">Kontak</h2>
     <div class="kontak-list">
       <!-- EMAIL -->
-      <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcRzDQqPzDGkfhkwWbrldNVgNNFtZhTDhDmDtdmsLvwVPwhCWGXNphSWpCRTgvdDQTpDkzXWM" target="_blank"class="kontak-item">
+      <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcRzDQqPzDGkfhkwWbrldNVgNNFtZhTDhDmDtdmsLvwVPwhCWGXNphSWpCRTgvdDQTpDkzXWM" class="kontak-item">
         <i class="fas fa-envelope"></i>
         <span>rahmatamat0212@gmail.com</span>
       </a>
@@ -104,6 +114,21 @@
     }
 
     window.addEventListener('scroll', showOnScroll);
+  </script>
+
+  <script>
+    function toggleText() {
+      const text = document.getElementById("moreText");
+      const btn = document.querySelector(".btn-toggle");
+
+      if (text.style.display === "block") {
+        text.style.display = "none";
+        btn.innerText = "Lihat Selengkapnya";
+      } else {
+        text.style.display = "block";
+        btn.innerText = "Tutup";
+      }
+    }
   </script>
 
 </body>
