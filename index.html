@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Website Saya</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <!-- HERO / HEAD -->
+  <section class="hero">
+    <div class="overlay">
+      <h1>Selamat Datang Di Website Saya</h1>
+      <p>Saya adalah seorang pustakawan yang hobi melakukan pengembangan perpustakaan
+        <br>
+        Saya juga merupakan seorang konsultan perpustakaan yang dapat memberikan bantuan untuk pengembangan perpustakaan
+      </p>
+    </div>
+  </section>
+
+  <!-- TENTANG -->
+  <section class="tentang hidden" id="tentang">
+  <div class="container">
+    <h2 class="judul">TENTANG</h2>
+    <div class="about-content hidden">
+      <!-- FOTO -->
+      <div class="about-image">
+        <img src="images/foto.jpeg" alt="Foto saya">
+      </div>
+      <!-- BIODATA -->
+      <div class="about-text">
+        <p>
+          Saat ini saya merupakan pustakawan di Politeknik Kesehatan Kemenkes Manado.
+          Saya aktif dalam melakukan pengembangan perpustakaan, terutama dalam bidang
+          teknologi dan informatika. Saya memiliki hobi membaca dan traveling ke berbagai 
+          daerah di Indonesia.
+        </p>
+        <div class="biodata">
+          <p><strong>Nama:</strong> Rahmatullah Ade, S.Sos</p>
+          <p><strong>TTL:</strong> Tidore, 16 Mei 2000</p>
+          <p><strong>Pendidikan:</strong> S1 - Ilmu Perpustakaan</p>
+          <p><strong>Pengalaman:</strong> Konsultan Pengembangan Perpustakaan</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <!-- KONTAK -->
+  <section class="kontak" id="kontak">
+  <div class="container">
+    <h2 class="judul">Kontak</h2>
+    <div class="kontak-list">
+      <!-- EMAIL -->
+      <a href="mailto:rahmatamat0212@gmail.com" class="kontak-item">
+        <i class="fas fa-envelope"></i>
+        <span>rahmatamat0212@gmail.com</span>
+      </a>
+      <!-- INSTAGRAM -->
+      <a href="https://instagram.com/username_kamu" target="_blank" class="kontak-item">
+        <i class="fab fa-instagram"></i>
+        <span>@username_kamu</span>
+      </a>
+      <!-- WEBSITE -->
+      <a href="https://websitekamu.com" target="_blank" class="kontak-item">
+        <i class="fas fa-globe"></i>
+        <span>www.websitekamu.com</span>
+      </a>
+    </div>
+  </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Powerd by <strong>RahmatJawaKonora</strong></p>
+  </footer>
+
+  <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+
+        const navbar = document.querySelector(".navbar");
+        window.addEventListener("scroll", function() {
+          navbar.classList.toggle("scrolled", window.scrollY > 50);
+        });
+      });
+  </script>
+
+  <script>
+    const elements = document.querySelectorAll('.hidden');
+    function showOnScroll() {
+      elements.forEach(el => {
+        const posisi = el.getBoundingClientRect().top;
+        const layar = window.innerHeight;
+        if (posisi < layar - 100) {
+          el.classList.add('show');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', showOnScroll);
+  </script>
+
+</body>

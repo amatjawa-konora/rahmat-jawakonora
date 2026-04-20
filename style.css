@@ -1,0 +1,248 @@
+.hero {
+  height: 75vh;
+  background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('images/background.jpeg') center/cover no-repeat;
+    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center; /* penting */
+}
+
+.overlay {
+  padding: 40px;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+
+  margin: 0;          /* reset */
+}
+
+/* SECTION UMUM */
+section {
+  padding: 80px 20px;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.overlay h1 {
+  font-size: 52px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* TENTANG */
+.tentang {
+  background: #f9f9f9;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.about-content img {
+  width: 200px;
+  border-radius: 12px;
+}
+
+.about-text {
+  max-width: 500px;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Judul tengah */
+.judul {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Layout */
+.about-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+/* Foto bulat */
+.about-image img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #ddd;
+}
+
+/* Text */
+.about-text {
+  max-width: 600px;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Biodata */
+.biodata p {
+  margin: 5px 0;
+}
+
+/* Lebarkan area text */
+.about-text {
+  max-width: 800px;   /* sebelumnya 500/600 */
+}
+
+/* Rata kiri kanan */
+.about-text p {
+  text-align: justify;
+}
+
+/* kondisi awal */
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+/* saat muncul */
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* KONTAK */
+/* Judul tengah */
+.kontak .judul {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* List tengah */
+.kontak-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Item */
+.kontak-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  background: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+/* Icon */
+.kontak-item i {
+  font-size: 20px;
+  color: #007bff;
+}
+
+/* Hover */
+.kontak-item:hover {
+  transform: translateY(-5px);
+}
+
+.kontak-item {
+  text-decoration: none;
+  color: black;
+}
+
+.kontak-item:hover {
+  transform: translateY(-5px);
+  color: #007bff;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: white;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  transition: 0.3s;
+  background: transparent;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.logo img {
+  filter: brightness(0) invert(1); /* jadi putih */
+}
+
+.navbar.scrolled .logo img {
+  filter: none; /* kembali normal */
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  color: yellow;
+}
+
+/* Saat scroll */
+.navbar.scrolled {
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar.scrolled a {
+  color: black;
+}
+
+.navbar.scrolled .logo {
+  color: black;
+}
+
+.nav-container {
+  max-width: 1300px;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
